@@ -50,7 +50,7 @@
     "publicIPAddressType": "Dynamic",
     "vhdStorageContainerName": "vhds",
     "vmName": "IISWebDeployVM",
-    "vmSize": "Standard_DS2_v2",
+    "vmSize": "Standard_DS1_v2",
     "virtualNetworkName": "IISWebDeployVNET",
     "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
