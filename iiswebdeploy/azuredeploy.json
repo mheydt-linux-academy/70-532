@@ -41,7 +41,7 @@
     "imagePublisher": "MicrosoftWindowsServer",
     "imageOffer": "WindowsServer",
     "OSDiskName": "osdiskforwindowssimple",
-    "nicName": "myVMNic",
+    "nicName": "iisWebDeployNic",
     "addressPrefix": "192.168.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "192.168.1.0/24",
@@ -111,7 +111,7 @@
       }
     },
     {
-      "name": "IISnsg",
+      "name": "IISWebDeployNsg",
       "type": "Microsoft.Network/networkSecurityGroups",
       "apiVersion": "2016-03-30",
       "location": "[resourceGroup().location]",
@@ -187,7 +187,7 @@
           }
         ],
         "networkSecurityGroup": {
-          "id": "[resourceId('Microsoft.Network/networkSecurityGroups/', 'IISnsg')]"
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups/', 'IISWebDeployNsg')]"
         }
       }
     },
