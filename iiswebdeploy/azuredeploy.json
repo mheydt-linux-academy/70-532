@@ -15,7 +15,7 @@
       "metadata": {
         "description": "Password for the Virtual Machine."
       },
-      "defaultValue": "P@ssw0rd2016"
+      "defaultValue": "P@ssw0rd2018"
     },
     "dnsNameForPublicIP": {
       "type": "string",
@@ -23,7 +23,7 @@
       "metadata": {
         "description": "Globally unique Name for the Public IP used to access the Virtual Machine."
       },
-      "defaultValue": "mypip17"
+      "defaultValue": "iiswebdeployPIP"
     },
     "windowsOSVersion": {
       "type": "string",
@@ -46,12 +46,12 @@
     "subnetName": "Subnet",
     "subnetPrefix": "192.168.1.0/24",
     "vhdStorageType": "Premium_LRS",
-    "publicIPAddressName": "myPublicIP",
+    "publicIPAddressName": "iisWebDeployPIP",
     "publicIPAddressType": "Dynamic",
     "vhdStorageContainerName": "vhds",
-    "vmName": "IISVM",
+    "vmName": "IISWebDeployVM",
     "vmSize": "Standard_DS2_v2",
-    "virtualNetworkName": "MyVNET",
+    "virtualNetworkName": "IISWebDeployVNET",
     "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
     "vhdStorageAccountName": "[concat('vhdstorage', uniqueString(resourceGroup().id))]",
